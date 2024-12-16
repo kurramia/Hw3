@@ -4,6 +4,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import com.codeborne.selenide.Configuration;
 
 @Feature("Поиск отелей")
 @Story("Проверка фильтрации по количеству звезд")
@@ -11,8 +12,9 @@ import org.junit.jupiter.api.Test;
 public class BookingTest {
     @BeforeAll
     static void setUpBaseUrl() {
-        System.setProperty("selenide.baseUrl", "http://example.com");
+        System.setProperty("selenide.baseUrl", "http://google.com");
     }
+
     @Test
     @Description("Поиск отелей в Анталии с фильтром '5 звезд'")
     public void testBookingAntalyaFiveStarFilter() {
